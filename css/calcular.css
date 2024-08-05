@@ -1,0 +1,23 @@
+.container{
+    width: 70%;
+    background-color: rgb(27, 189, 135);
+    margin: 0px auto;
+    display: block;
+    width: fit-content; /*deixa centralizado e pequeno
+    
+   
+}
+input{
+    height: 34px; /*altura*/
+    font-size: 24px;
+    width: 250px; /*tamanho*/
+
+}
+button{
+   
+    background-color: blue;
+    color: antiquewhite;
+}
+#botao{
+    margin-top: 10px;
+}

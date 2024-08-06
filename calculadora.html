@@ -7,28 +7,35 @@
     <title>Calculadora</title>
     <link rel="stylesheet" href="css/calcular.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
     <form class="container" id="calculadora">
         <h1>Calculadora Simples</h1>
-        <div class="mb-3" >
-        <div>
-            <label for="numero1" class="form-label">Numero 1:</label>
-            <input type="number" class="form-control" id="numero1" placeholder="Digite um número">
-        </div>
-        <div>
-            <label for="numero2" class="form-label">Numero 2:</label>
-            <input type="number" id="numero2" class="form-control" placeholder="Digite outro número">
-        </div>
-
-        <div id="botao">
-            <button type="submit" >Calcular</button>
+        <div class="mb-3">
+            <div>
+                <label for="numero1" class="form-label">Numero 1:</label>
+                <input type="number" class="form-control" id="numero1" placeholder="Digite um número">
+            </div>
             <br>
-            <!-- <button type="submit">Validar</button> -->
+
+            <div>
+                <label for="numero2" class="form-label">Numero 2:</label>
+                <input type="number" id="numero2" class="form-control" placeholder="Digite outro número">
+            </div>
+            <br>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger me-2" id="somar">Somar</button>
+                <button type="button" class="btn btn-warning me-2" id="subtrair">Subtrair</button>
+                <button type="button" class="btn btn-success me-2" id="multiplicar">Multiplicar</button>
+                <button type="button" class="btn btn-dark" id="dividir">Dividir</button>
+            </div>
+            <br>
+            <br>
+
+
         </div>
-    </div>
         <p id="resultado"></p>
 
     </form>

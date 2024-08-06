@@ -1,20 +1,52 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const numero1Input = document.getElementById('numero1');
+    const numero2Input = document.getElementById('numero2');
+    const resultadoElement = document.getElementById('resultado');
 
-function calcular (numero1,numero2){
-    var soma = (numero1+numero2) ;
-    return soma
-}
+    document.getElementById('somar').addEventListener('click', () => {
+        realizarCalculo('somar');
+    });
 
-function executarFormulario(event){
-    event.preventDefault() //previne que a tela de um refresh
-    var numero1 = parseFloat(document.getElementById('numero1').value)
-    var numero2 = parseFloat(document.getElementById('numero2').value)
-  
-    var resultado=(calcular(numero1,numero2))
-    document.getElementById('resultado').innerText = "O resultado é " + resultado
-   console.log(resultado)
-   
-}
+    document.getElementById('subtrair').addEventListener('click', () => {
+        realizarCalculo('subtrair');
+    });
 
-document //pegue o documento que recebe o script
-.getElementById("calculadora") //pegue o elemento com id calculadora
-.addEventListener('submit', executarFormulario) //quando acontencer a submissão, execute a funcao executarFormulario
+    document.getElementById('multiplicar').addEventListener('click', () => {
+        realizarCalculo('multiplicar');
+    });
+
+    document.getElementById('dividir').addEventListener('click', () => {
+        realizarCalculo('dividir');
+    });
+
+    function realizarCalculo(operacao) {
+        const numero1 = parseFloat(numero1Input.value);
+        const numero2 = parseFloat(numero2Input.value);
+
+        let resultado;
+        switch (operacao) {
+            case 'somar':
+                resultado = numero1 + numero2;
+                break;
+            case 'subtrair':
+                resultado = numero1 - numero2;
+                break;
+            case 'multiplicar':
+                resultado = numero1 * numero2;
+                break;
+            case 'dividir':
+                if (numero2 === 0) {
+                    resultado = 'Não é possível dividir por zero!';
+                } else {
+                    resultado = numero1 / numero2;
+                }
+                break;
+            default:
+                resultado = 'Operação inválida';
+                break;
+        }
+
+        resultadoElement.textContent = `Resultado: ${resultado}`;
+    }
+});
+

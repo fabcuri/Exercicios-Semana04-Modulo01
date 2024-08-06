@@ -1,30 +1,29 @@
 
-console.log(“Script funcionando“)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const numero1Input = document.getElementById('numero1');
-    const numero2Input = document.getElementById('numero2');
-    const resultadoElement = document.getElementById('resultado');
+    const numero1Formulario = document.getElementById('numero1');
+    const numero2Formulario = document.getElementById('numero2');
+    const resultadoFormulario = document.getElementById('resultado');
 
     document.getElementById('somar').addEventListener('click', () => {
-        realizarCalculo('somar');
+        gerarResultado('somar');
     });
 
     document.getElementById('subtrair').addEventListener('click', () => {
-        realizarCalculo('subtrair');
+        gerarResultado('subtrair');
     });
 
     document.getElementById('multiplicar').addEventListener('click', () => {
-        realizarCalculo('multiplicar');
+        gerarResultado('multiplicar');
     });
 
     document.getElementById('dividir').addEventListener('click', () => {
-        realizarCalculo('dividir');
+        gerarResultado('dividir');
     });
 
-    function realizarCalculo(operacao) {
-        const numero1 = parseFloat(numero1Input.value);
-        const numero2 = parseFloat(numero2Input.value);
+    function gerarResultado(operacao) {
+        const numero1 = parseFloat(numero1Formulario.value);
+        const numero2 = parseFloat(numero2Formulario.value);
 
         let resultado;
         switch (operacao) {
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
 
-        resultadoElement.textContent = `Resultado: ${resultado}`;
+        resultadoFormulario.textContent = `Resultado: ${resultado}`;
     }
 });
 

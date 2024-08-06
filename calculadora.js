@@ -1,3 +1,6 @@
+
+console.log(“Script funcionando“)
+
 document.addEventListener('DOMContentLoaded', () => {
     const numero1Input = document.getElementById('numero1');
     const numero2Input = document.getElementById('numero2');
